@@ -39,6 +39,6 @@ export async function getServerSideProps({ preview = false }) {
   const allPosts = (await getAllPostsForHome(preview)) ?? []
   const date = new Date()
   return {
-    props: { preview, allPosts, currentDateString: date.toString() },
+    props: { preview, allPosts, currentDateString: `${date.toString()}-test` },
   }
 }
